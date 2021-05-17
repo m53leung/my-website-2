@@ -1,0 +1,230 @@
+@keyframes bounce {
+    0%   {
+        transform: translateY(0.3rem);
+        animation-timing-function: cubic-bezier(0.3, 1, 1, 1);    
+    }
+    50%  {
+        transform: translateY(-0.3rem);
+        animation-timing-function: cubic-bezier(0, 0, 0.7, 0);
+    }
+    100% {transform: translateY(0.3rem);}
+  }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 2rem;
+    color: black;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.green {
+    color:rgb(76,187,23);
+}
+
+.red {
+    color: rgb(184,15,10);
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+    display: inline-block;
+}
+
+a:hover {
+    transform: scale(1.05);
+    color: inherit;
+}
+
+#topBar {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    transition: all 0.3s ease-out;
+}
+
+#topBar.clear {
+    background-color: rgba(0, 0, 0, 0);
+    color: #212529;
+}
+
+#topBar.dark {
+    background-color: black;
+    color: white;
+}
+
+#topBar.light {
+    background-color: white;
+    color: black;
+}
+
+#topBar > div {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+#topBar > div:first-child {
+    justify-content: flex-start;
+}
+
+#topBar > div:last-child {
+    justify-content: flex-end;
+}
+
+#topBar > div > * {
+    margin: 0;
+}
+
+.topBarSpacer {
+    padding: 1.5rem;
+    visibility: hidden;
+}
+
+#firstPage {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    padding: 0;
+    background-color: #F4F0DB;
+    padding: 0;
+    display: block;
+}
+
+#scrollDownIndicator {
+    transform: translateY(0.3rem);
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+#content {
+    background-color: white;
+}
+
+.section {
+    height: 200vh;
+}
+
+.sectionDark {
+    background-color: black;
+    color: white;
+}
+
+.sectionContent {
+    padding-top: 6rem;
+    padding-right: 20%;
+    padding-left: 20%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.sectionText {
+    text-align: center;
+    padding: 3rem;
+}
+
+.row.centerCols > .col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row.padCols > .col {
+    padding: 3rem;
+}
+
+.iconDrop {
+    transition: all 0.2s ease-out;
+}
+
+.iconWrapper {
+    overflow-y: hidden;
+}
+
+.iconLabel {
+    opacity: 0;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.badgeWrapper {
+    position: relative;
+}
+
+.badgeWrapper:hover > .iconWrapper > .iconDrop {
+    transform: translateY(110%);
+}
+
+.badgeWrapper:hover > .iconLabel {
+    opacity: 1;
+}
+
+.iconLabel {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    cursor: default;
+}
+
+.animateEnterRight {
+    transform: translateX(33vw);
+}
+
+.animateEnterLeft {
+    transform: translateX(-33vw);
+}
+
+.animateEnterTop {
+    transform: translateY(-3rem);
+}
+
+.animateEnterBottom {
+    transform: translateY(3rem);
+}
+
+.animateFade {
+    opacity: 0;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+    font-size: 1.25rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
