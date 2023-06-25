@@ -166,6 +166,14 @@ a:hover {
     padding: 3rem;
 }
 
+.iconWide {
+    width: 64px;
+}
+
+.iconTall {
+    height: 64px;
+}
+
 .iconDrop {
     transition: all 0.2s ease-out;
 }
@@ -221,8 +229,8 @@ a:hover {
 }
 
 #footer {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     font-size: 1.25rem;
     padding: 1.5rem;
     display: flex;
